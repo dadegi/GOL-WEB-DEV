@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Corso GOL Web Development" />
+    <meta name="description" content="Codice della giornata 2 del modulo 1 del corso" />
+    <meta name="keywords" content="HTML, GOL, Web Development, codice" />
+    <title>Codice M1 G2</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <!-- Headings - elementi block -->
+    <h1>ELEMENTI DI TESTO: Headings (elementi block)</h1>
+    <h1><code>h1</code> - Titolo principale - 32px</h1>
+    <p>Deve essere presente SOLTANTO UNA VOLTA in una pagina</p>
+    <h2><code>h2</code> - Sottotitolo se IMMEDIATAMENTE successivo a un h1, altrimenti titolo di un contenuto successivo
+        - 24px</h2>
+    <h3><code>h3</code> - Sottotitolo di un h2, poco usato per il corpo del testo - 18/19px (18.72)</h3>
+    <h4><code>h4</code> - Generalmente corpo del testo per piccoli blocchi di contenuto - 16px (dimensione predefinita
+        del testo)</h4>
+    <h5><code>h5</code> - Generalmente testo secondario - 13/14px (13.28)</h5>
+    <h6><code>h6</code> - Testo in nota, poco usato per le dimensioni - 10/11px (10.72)</h6>
+    <p><code>p</code> (paragraph) - Testo normale o corpo del testo - 16px</p>
+
+    <hr />
+    <h1>La prima lezione</h1>
+    <h2>Gli argomenti della lezione del primo giorno</h2>
+    <p>Il primo giorno abbiamo trattato del web in generale, della struttura della comunicazione web e abbiamo
+        introdotto le caratteristiche base dell'HTML</p>
+    <hr />
+    <!-- Fine headings -->
+
+    <!-- Formattazione del testo - elementi inline -->
+    <h1>ELEMENTI DI TESTO: Formattazione (elementi inline)</h1>
+    <h2 class="normalH2">
+        Testo in <b>grassetto</b> semplice: <code>b</code><br />
+        Testo in <strong>grassetto</strong> importante per il contenuto: <code>strong</code><br />
+        Testo in <i>corsivo</i> semplice: <code>i</code><br />
+        Testo in <em>corsivo</em> enfatizzato: <code>em</code><br />
+        Testo <mark>evidenziato</mark> per maggiore visibilità: <code>mark</code><br />
+        Testo visualizzato come <code>codice</code>: <code>code</code><br />
+        Testo visualizzato come scritto su <kbd>tastiera</kbd>: <code>kbd</code><br />
+        Testo inserito <del>al posto di</del> <ins>come sostituto</ins> di un altro testo: <code>del</code> per barrare,
+        <code>ins</code> per sostituire<br />
+        Testo
+        <pre>stampato     esattamente
+            come scritto
+                 in     HTML</pre>: <code>pre</code> (si comporta come un elemento block)<br />
+        Con il tag <code>abbr</code> accompagnato dall'attributo <code>title</code> possiamo creare un effetto tooltip
+        su un'abbreviazione.<br />
+        <b>Es.:</b><br />
+        Stiamo lavorando sull'<abbr title="Hyper Text Markup Language">HTML</abbr>, il linguaggio per creare la
+        struttura delle pagine web.
+    </h2>
+    <!-- Fine formattazione -->
+
+    <hr />
+
+    <!-- Liste -->
+    <h1>ELEMENTI DI TESTO: Liste (elementi block)</h1>
+    <h3>
+        Liste non ordinate con <code>ul</code>, liste ordinate con <code>ol</code>, elementi di lista con
+        <code>li</code>, elementi di lista con il contenuto vero e proprio, formattato con la dimensione predefinita del
+        testo (16px)
+    </h3>
+    <h2>Lista non ordinata: blocco <code>ul</code></h2>
+    <ul>
+        <li>Primo elemento</li>
+        <li>Secondo elemento</li>
+        <li>Terzo elemento</li>
+    </ul>
+
+    <h2>Lista ordinata: blocco <code>ol</code></h2>
+    <ol>
+        <li>Primo elemento</li>
+        <li>Secondo elemento</li>
+        <li>Terzo elemento</li>
+    </ol>
+
+    <h2>Lista complessa</h2>
+    <ul>
+        <li>Primo elemento</li>
+        <li>Secondo elemento
+            <ul>
+                <li>Primo sottoelemento</li>
+                <li>Secondo sottoelemento</li>
+            </ul>
+        </li>
+        <li>Terzo elemento</li>
+    </ul>
+
+    <ol>
+        <li>Primo elemento</li>
+        <li>Secondo elemento
+            <ol>
+                <li>Primo sottoelemento</li>
+                <li>Secondo sottoelemento</li>
+            </ol>
+        </li>
+        <li>Terzo elemento</li>
+    </ol>
+    <!-- Fine liste -->
+
+    <hr />
+
+    <!-- Citazioni -->
+    <h1>ELEMENTI DI TESTO: Citazioni (elemento block: <code>blockquote</code>; elemento inline: <code>cite</code>)</h1>
+    <h2>Citazione esplicita (<code>cite</code> utilizzato come tag autonomo)</h2>
+    <blockquote>
+        "Il web è per tutti e questo è il suo potere"
+        <cite>aut: Time Berners-Lee</cite>
+    </blockquote>
+
+    <h2>Citazione implicita (<code>cite</code> utilizzato come attributo di <code>blockquote</code>)</h2>
+    <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML">
+        "<abbr title="Hyper Text Markup Language">HTML</abbr> defines the meaning and structure of web content."
+    </blockquote>
+
+    <h2>Citazione mista (<code>cite</code> utilizzato sia come attributo di <code>blockquote</code> che come tag
+        autonomo)</h2>
+    <blockquote cite="http://info.cern.ch/hypertext/WWW/TheProject.html">
+        "The WorldWideWeb (W3) is a wide-area hypermedia information retrieval initiative aiming to give universal
+        access to a large universe of documents."
+        <cite>aut. Tim Berners-Lee</cite>
+    </blockquote>
+    <!-- Fine citazioni -->
+
+</body>
+
+</html>
