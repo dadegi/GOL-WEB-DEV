@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Corso GOL Web Development" />
+    <meta name="description" content="Codice della giornata 2 del modulo 1 del corso" />
+    <meta name="keywords" content="HTML, GOL, Web Development, codice" />
+    <title>I forms</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <h1>I FORMS</h1>
+
+    <h2>Form semplice</h2>
+
+    <form method="post" action="thanks.html">
+        <label for="nomeCompleto">Nome completo</label>
+        <input type="text" name="nomeCompleto" placeholder="Inaerisci il tuo nome completo" />
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Scegli una password" />
+        <input type="submit" value="invia" />
+    </form>
+
+    <h2>Form completo</h2>
+    <form method="get" action="thanks.html">
+        <label for="nomeUtente">Username</label>
+        <input type="text" name="nomeUtente" id="nomeUtente" placeholder="Scegli un nome utente" />
+        <label for="passwordUtente">Password</label>
+        <input type="password" name="passwordUtente" id="passwordUtente" placeholder="Scegli una password" />
+        <label for="emailUtente">Email</label>
+        <input type="email" name="emailUtente" id="emailUtente" placeholder="Inserisci una email valida" />
+        <button type="submit" value="Invia">Invia</button>
+        <button type="reset" value="Cancella">Cancella</button>
+    </form>
+
+    <h2>Form complesso</h2>
+    <form method="get" action="thanks.html">
+        <fieldset>Anagrafica
+            <label for="completeName">Nome completo</label>
+            <input type="text" name="completeName" id="completeName" />
+            <label for="userPass">Password</label>
+            <input type="password" name="userPass" />
+            <br />
+            <label for="address">Indirizzo completo</label>
+            <textarea name="address" rows="3" cols="40" placeholder="Inserisci l'indirizzo completo"></textarea>
+            <br /><br />
+            <label for="frequency">Frequenza</label>
+            <select name="frequency">
+                <option value="">Scegli la ftrequenza</option>
+                <option value="FT">Full time</option>
+                <option value="PT">Part time</option>
+                <option value="Sr">Serale</option>
+            </select>
+        </fieldset>
+        <br />
+        <p>Corso scelto</p>
+        <label for="course">Corso Scelto:</label>
+        <label for="HTML">HTML</label>
+        <input type="radio" value="HTML" name="course" />
+        <label for="CSS">CSS</label>
+        <input type="radio" value="CSS" name="course" />
+        <label for="JS">JavaScript</label>
+        <input type="radio" value="JS" name="course" />
+        <button type="submit">Invia</button>
+        <button type="reset">Cancella</button>
+    </form>
+
+</body>
+
+</html>
