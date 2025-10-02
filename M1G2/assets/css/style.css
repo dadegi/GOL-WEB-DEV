@@ -1,11 +1,12 @@
 .normalH2 {
-    font-weight: normal;
+	font-weight: normal;
 }
 
 table {
-    border-collapse: collapse;
+	border-collapse: collapse;
 }
 
-td, th {
-    border: 2px solid black;
+td,
+th {
+	border: 2px solid black;
 }
