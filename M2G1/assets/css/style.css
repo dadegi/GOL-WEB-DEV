@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+/*Allineamento generale del testo*/
+.textCenter {
+	text-align: center;
+}
+
+/* Colorazione del titolo pagina*/
+h1 {
+	color: #ff6200;
+	font-size: 2.5rem;
+}
+
+/*colorazione dei titoli interni*/
+.sectionTitle {
+	color: red;
+	letter-spacing: 5px;
+}
+
+#articleTitle {
+	text-align: left;
+	color: green;
+}
+
+section,
+p {
+	background-color: lightgrey;
+}
+
+section p {
+	line-height: 60px;
+}
+
+.elementList > li {
+	color: red;
+	list-style-type: none;
+}
+
+#header a:link, #header a:visited {
+    color: #0000EE;
+    text-decoration: none;
+}
+
+#header a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.separator {
+    height: 350px;
+}
+
+#userName:focus {
+    background-color: yellow;
+}
+
+input:checked {
+    border: none;
+    outline: 2px solid red;
+}
+
+.elementList ul li::after {
+    content: ' elemento di lista';
+}
+
+nav ul li::before {
+    line-height: 1.5;
+    content: '🔗';
+}
