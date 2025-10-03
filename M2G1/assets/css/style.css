@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.2;
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -13,6 +20,7 @@
 h1 {
 	color: #ff6200;
 	font-size: 2.5rem;
+	font-family: fantasy;
 }
 
 /*colorazione dei titoli interni*/
@@ -70,4 +78,13 @@ input:checked {
 nav ul li::before {
     line-height: 1.5;
     content: '🔗';
+}
+
+#first {
+	border: 5px double;
+	border-top-color: red;
+	border-right-color: green;
+	border-bottom-color: blue;
+	border-left-color: black;
+	border-radius: 30px;
 }
