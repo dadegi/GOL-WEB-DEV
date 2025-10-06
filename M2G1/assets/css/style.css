@@ -4,7 +4,8 @@
 	box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
 	margin: 0;
 	padding: 0;
 	line-height: 1.2;
@@ -48,36 +49,37 @@ section p {
 	list-style-type: none;
 }
 
-#header a:link, #header a:visited {
-    color: #0000EE;
-    text-decoration: none;
+#header a:link,
+#header a:visited {
+	color: #0000ee;
+	text-decoration: none;
 }
 
 #header a:hover {
-    color: red;
-    text-decoration: underline;
+	color: red;
+	text-decoration: underline;
 }
 
 .separator {
-    height: 350px;
+	height: 350px;
 }
 
 #userName:focus {
-    background-color: yellow;
+	background-color: yellow;
 }
 
 input:checked {
-    border: none;
-    outline: 2px solid red;
+	border: none;
+	outline: 2px solid red;
 }
 
 .elementList ul li::after {
-    content: ' elemento di lista';
+	content: ' elemento di lista';
 }
 
 nav ul li::before {
-    line-height: 1.5;
-    content: '🔗';
+	line-height: 1.5;
+	content: '🔗';
 }
 
 #first {
@@ -87,4 +89,134 @@ nav ul li::before {
 	border-bottom-color: blue;
 	border-left-color: black;
 	border-radius: 30px;
+}
+
+/* Box model */
+
+.container,
+.mobileFirst {
+	margin: 15px;
+	border: 2px solid black;
+}
+
+.centered,
+.centeredMobile {
+	margin: 20px;
+	padding: 20px;
+	margin: 0 auto;
+	color: white;
+}
+
+.centered {
+	width: 1000px;
+}
+
+.centered div h4:hover {
+	color: yellow;
+}
+
+.centered div {
+	height: 300px;
+	width: 32%;
+	display: inline-block;
+	padding: 10px;
+	font-size: 2em;
+}
+
+#firstInline {
+	background-color: red;
+}
+
+#secondInline {
+	background-color: blue;
+}
+
+#thirdInline {
+	background-color: green;
+}
+
+.text h2 {
+	display: inline-block;
+	text-align: center;
+	margin: 20px;
+}
+
+.images img {
+	width: 200px;
+	max-width: 100%;
+	height: auto;
+	margin: 15px;
+}
+
+.images img:first-child {
+	float: left;
+}
+
+.images img:last-child {
+	float: right;
+}
+
+/* Media query per dispositivi più piccoli di 992px */
+@media screen and (max-width: 991px) {
+	.centered {
+		width: 100%;
+	}
+
+	.centered div {
+		display: block;
+		width: 100%;
+		font-size: 1em;
+	}
+}
+
+/* CSS per mobile first (min-width: 992px */
+.centeredMobile div {
+	height: 300px;
+	width: 100%;
+	padding: 10px;
+}
+
+#firstInlineMobile {
+	background-color: red;
+}
+
+#secondInlineMobile {
+	background-color: blue;
+}
+
+#thirdInlineMobile {
+	background-color: green;
+}
+
+@media screen and (min-width: 992px) {
+	.centeredMobile {
+		width: 1000px;
+	}
+
+	.centeredMobile div {
+		width: 32%;
+		display: inline-block;
+		font-size: 2em;
+	}
+}
+
+/* media query per stgampa B/N */
+@media print {
+	nav {
+		display: none;
+	}
+
+	.centered div,
+	.centeredMobile div {
+		background-color: transparent;
+		color: black;
+		display: inline-block;
+		width: 32%;
+		font-size: 2em;
+	}
+
+	.centeredMobile {
+		margin: 0 auto;
+		text-align: center;
+	}
 }
