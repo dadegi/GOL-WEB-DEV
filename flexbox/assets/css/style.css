@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CSS reset */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.2;
+}
+
+/* Blocco header-nav */
+header {
+    height: 150px;
+    background-color: darkslategrey;
+    color: white;
+    font-size: 6em;
+    font-weight: bolder;
+    position: sticky;
+    top: 0;
+    display: flex;
+}
+
+header p {
+    margin-block-start: 0px;
+}
+
+#logo img {
+    width: 30%;
+    max-width: 100%;
+}
