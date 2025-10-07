@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/impact');
 
 * {
 	box-sizing: border-box;
@@ -21,7 +22,7 @@ body {
 h1 {
 	color: #ff6200;
 	font-size: 2.5rem;
-	font-family: fantasy;
+	font-family: 'Impact', sans-serif;
 }
 
 /*colorazione dei titoli interni*/
@@ -218,5 +219,69 @@ nav ul li::before {
 	.centeredMobile {
 		margin: 0 auto;
 		text-align: center;
+	}
+}
+
+/* renderizzazione header e nav */
+/* hover sui link */
+nav a:link,
+nav a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+/* trasformazione lista */
+nav ul {
+	padding-inline-start: 0px;
+	text-align: center;
+}
+
+nav ul li {
+	list-style-type: none;
+	display: inline;
+	margin-right: 20px;
+}
+
+/* organizzazione header */
+header {
+	background-color: darkslategrey;
+	padding-top: 2em;
+}
+
+#headTitle div {
+	display: inline-block;
+	text-align: center;
+}
+
+#pageTitle {
+	width: 75%;
+	vertical-align: middle;
+}
+
+#logoCSS {
+	width: 20%;
+}
+
+#headTitle h1 {
+	font-size: 6em;
+	margin-block-start: 0px;
+}
+
+#headTitle img {
+	width: 30%;
+}
+
+@media screen and (max-width: 768px) {
+	nav ul li {
+		display: list-item;
+	}
+
+	#headTitle img {
+		width: 60%;
 	}
 }
