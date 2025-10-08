@@ -25,7 +25,6 @@ header {
 	display: flex;
 	flex-wrap: wrap;
 	align-content: center;
-	position: relative;
 }
 
 header p {
@@ -70,5 +69,83 @@ nav ul li {
 }
 
 nav ul li::before {
-    content: '🔗';
+	content: '🔗';
+}
+
+nav a:link,
+nav a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: yellowgreen;
+	text-decoration: underline;
+}
+
+/* responsive.html (mobile first) */
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 95vh;
+}
+
+.container div {
+	border: 2px solid black;
+	margin-top: 15px;
+	flex: 1;
+	text-align: center;
+}
+
+#mainContent {
+	background-color: red;
+	flex-grow: 4;
+}
+
+#news {
+	background-color: cyan;
+	flex-grow: 2;
+}
+
+#social {
+	background-color: green;
+}
+
+/* footer */
+footer {
+	height: 150px;
+	text-align: center;
+	color: white;
+}
+
+/* media query */
+/* media query desktop first per header e nav */
+@media screen and (max-width: 767px) {
+	header {
+		font-size: 3em;
+		height: 150px;
+	}
+
+	nav ul li {
+		display: list-item;
+	}
+}
+
+/* media query mobile first per contenuto pagina responsive */
+@media screen and (min-width: 992px) {
+	.container {
+		flex-direction: row;
+	}
+
+	#mainContent {
+		order: 2;
+	}
+
+	#news {
+		order: 1;
+	}
+
+	#social {
+		order: 3;
+	}
 }
