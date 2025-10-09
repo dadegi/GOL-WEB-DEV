@@ -1,0 +1,202 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.2;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* header-nav */
+header {
+	display: flex;
+	flex-direction: column;
+	height: 150px;
+	text-align: center;
+	color: white;
+	background-color: darkslategrey;
+	margin-bottom: 2em;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-evenly;
+	padding-inline-start: 0px;
+}
+
+nav ul li {
+	list-style-type: none;
+	padding-inline-start: 0px;
+	margin-inline-start: 0px;
+	font-weight: bold;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+nav ul li a:hover {
+	text-decoration: underline;
+	color: aqua;
+}
+
+/* container grid */
+main {
+	display: flex;
+	justify-content: center;
+}
+
+.container {
+	display: grid;
+	background-color: aquamarine;
+	padding: 20px 10px;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1em 1em;
+	width: 80%;
+}
+
+.container div {
+	background-color: cyan;
+	border: 2px solid black;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bold;
+	padding: 15px 0;
+}
+
+#first {
+	grid-column: 1 / span 2;
+}
+
+#fifth {
+	grid-column: 3 / span 1;
+	grid-row: 2 / span 2;
+}
+
+#sixth {
+	grid-column: 1 / span 2;
+}
+
+@media screen and (max-width: 991px) {
+	.container {
+		grid-template-columns: 2fr 1fr;
+	}
+
+	#first {
+		grid-column: 1 / span 1;
+	}
+
+	#fifth {
+		grid-row: 4 / span 1;
+	}
+
+	#third,
+	#fourth,
+	#fifth,
+	#sixth {
+		grid-column: 1 / span 2;
+	}
+}
+
+/* seconda pagina: grid complesse */
+.containerSecond {
+	display: grid;
+	grid-template-areas:
+		'news main main social'
+		'news main main social'
+		'news main main aside'
+		'footer footer footer footer';
+	background-color: aquamarine;
+	padding: 20px 10px;
+	gap: 1em;
+	width: 80%;
+}
+
+.containerSecond div {
+	background-color: cyan;
+	border: 2px solid black;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bold;
+	padding: 15px 0;
+}
+
+#firstSecond {
+	grid-area: news;
+}
+
+#secondSecond {
+	grid-area: main;
+}
+
+#thirdSecond {
+	grid-area: social;
+}
+
+#fourthSecond {
+	grid-area: footer;
+}
+
+#fifthSecond {
+	grid-area: aside;
+}
+
+/* header seconda pagina */
+#header {
+	display: grid;
+	grid-template-areas:
+		'headTitle headTitle headTitle headTitle headTitle headTitle'
+		'navbar navbar navbar navbar navbar navbar';
+}
+
+.headLogo {
+	grid-area: headLogo;
+}
+
+.headTitle {
+	grid-area: headTitle;
+}
+
+#navbar {
+	grid-area: navbar;
+}
+
+#header {
+	display: flex;
+}
+
+.headLogo {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.headLogo img {
+	width: 35%;
+}
+
+#headTitle {
+	text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+	.headLogo img {
+		width: 25%;
+	}
+
+	.headLogo {
+		justify-content: flex-start;
+	}
+
+	.headLogo img {
+		width: 20%;
+	}
+}
