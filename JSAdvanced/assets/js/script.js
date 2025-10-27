@@ -4,9 +4,12 @@ const function1 = document.getElementById('function1');
 const function2 = document.getElementById('function2');
 const function3 = document.getElementById('function3');
 const function4 = document.getElementById('function4');
+const returnValue = document.getElementById('returnValue');
 
 let num1 = 5;
 let num2 = 2;
+let stop1 = 15;
+let stop2 = 20;
 
 scriptFlow();
 
@@ -18,6 +21,10 @@ function scriptFlow() {
 	sumParameter(num1, 'Pippo');
 	sumParameter(12);
 	sumParameter('pippo');
+	stop(stop1, stop2);
+	stop2 = 12;
+	stop(stop1, stop2);
+    print(6);
 	sum();
 }
 
@@ -53,6 +60,28 @@ function sumParameter(val1, val2) {
 			typeof val2 +
 			'<br />Il risultato della somma è ' +
 			(val1 + val2); // Da errore NaN perché è arrivato un solo parametro, che per JS è il primo, quindi il secondo è undefined
+	}
+}
+
+function stop(val1, val2) {
+	if (val1 <= 15 || val2 >= 20) {
+		returnKey.innerText = 'I valori non soddisfano la condizione';
+		return;
+	} else {
+		returnKey.innerText =
+			'Il primo valore è ' + val1 + ' e il secondo valore è ' + val2;
+	}
+}
+
+function square(val1) {
+	return val1 * val1;
+}
+
+function print(num1) {
+	if (num1 <= 4) {
+		returnValue.innerText = 'Il quadrato di ' + num1 + ' è ' + square(num1);
+	} else {
+		returnValue.innerText = 'Il valore è maggiore di quattro: ' + num1;
 	}
 }
 
