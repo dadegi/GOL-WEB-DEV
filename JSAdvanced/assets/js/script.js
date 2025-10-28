@@ -5,11 +5,14 @@ const function2 = document.getElementById('function2');
 const function3 = document.getElementById('function3');
 const function4 = document.getElementById('function4');
 const returnValue = document.getElementById('returnValue');
+const anonymous = document.getElementById('anonymous');
+const simpleArrow = document.getElementById('simpleArrow');
 
 let num1 = 5;
 let num2 = 2;
 let stop1 = 15;
 let stop2 = 20;
+let signal = false;
 
 scriptFlow();
 
@@ -24,7 +27,7 @@ function scriptFlow() {
 	stop(stop1, stop2);
 	stop2 = 12;
 	stop(stop1, stop2);
-    print(6);
+	print(6);
 	sum();
 }
 
@@ -78,12 +81,29 @@ function square(val1) {
 }
 
 function print(num1) {
-	if (num1 <= 4) {
-		returnValue.innerText = 'Il quadrato di ' + num1 + ' è ' + square(num1);
+	if (signal === false) {
+		if (num1 <= 4) {
+			returnValue.innerText =
+				'Il quadrato di ' + num1 + ' è ' + square(num1);
+		} else {
+			returnValue.innerText = 'Il valore è maggiore di quattro: ' + num1;
+		}
 	} else {
-		returnValue.innerText = 'Il valore è maggiore di quattro: ' + num1;
+		anonymous.innerText = 'Il risultato della funzione anonima è ' + num1;
+		signal = false;
 	}
+	console.log('Funzione principale eseguita');
 }
+
+// Funzione anonima utilizzata come funzione di callback con la funzione print, ma solo per generare un valore
+const anonymousSum = function (num1, num2) {
+	let mySum = num1 + num2;
+	signal = true;
+	console.log('Funzione callback eseguita');
+	return mySum;
+};
+
+print(anonymousSum(9, 15)); // L'invocazione della funzione anonima va messa qui perché le funzioni anonime non sono soggette a hoisting
 
 function sum() {
 	// Variabili LOCALI (local scope)

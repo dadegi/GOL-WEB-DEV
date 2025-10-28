@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esempio di organizzazione di flusso JS</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="second.html">ARROW-CALLBACK</a></li>
+                <li><a href="flow.html">LISTA DINAMICA</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="title">
+        <h1>Lista dinamica</h1>
+    </div>
+    <div class="container">
+        <form>
+            <input type="text" name="user" id="user" placeholder="Inserisci un nuovo utente" required />
+            <button type="button" id="insert" onclick="createUser();">INSERISCI</button>
+        </form>
+        <div class="errorCnt">
+            <p>&nbsp;</p>
+            <h3 id="error">❌ Inserire un nome nel form!</h3>
+        </div>
+        <div class="list">
+            <ul id="usersList"></ul>
+        </div>
+    </div>
+
+
+    <script src="assets/js/flow.js"></script>
+</body>
+
+</html>
