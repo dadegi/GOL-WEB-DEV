@@ -64,12 +64,11 @@ form {
 }
 
 .errorCnt {
-	display: flex;
 	margin-top: 10px;
 }
 
 #error {
-	display: none;
+    visibility: hidden;
 	font-size: 1.2em;
 	color: red;
 	margin-block-start: 0;

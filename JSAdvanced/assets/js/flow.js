@@ -18,10 +18,10 @@ function createUser() {
 
 function checkForm() {
 	if (user.value === '') {
-		errorDiv.style.display = 'block';
+		errorDiv.style.visibility = 'visible';
 		return false;
 	} else {
-		errorDiv.style.display = 'none';
+		errorDiv.style.visibility = 'hidden';
 		return true;
 	}
 }
