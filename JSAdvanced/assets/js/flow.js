@@ -26,13 +26,13 @@ function checkForm() {
 	}
 }
 
-function printList(userName) {
+const printList = (userName) => {
 	let newItem = document.createElement('li');
 	newItem.innerText = `Utente ${userName}`;
 	usersList.appendChild(newItem);
 	clearForm();
 }
 
-function clearForm() {
+const clearForm = () => {
 	user.value = '';
-}
+};
