@@ -50,7 +50,7 @@ function createTable() {
 }
 
 const printList = (userName) => {
-    title.classList.add('full');
+	title.classList.add('full');
 	let newRow = document.createElement('tr');
 	let newCellName = document.createElement('td');
 	newCellName.innerText = userName;
