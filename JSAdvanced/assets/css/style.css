@@ -14,13 +14,13 @@ body {
 }
 
 .header nav {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .header nav ul {
 	display: flex;
-    width: 50%;
+	width: 50%;
 	justify-content: space-around;
 }
 
@@ -68,7 +68,7 @@ form {
 }
 
 #error {
-    visibility: hidden;
+	visibility: hidden;
 	font-size: 1.2em;
 	color: red;
 	margin-block-start: 0;
@@ -77,4 +77,33 @@ form {
 
 .list {
 	font-size: 2em;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table caption, thead tr th {
+	background-color: cyan;
+	font-weight: bold;
+	color: blue;
+}
+
+td,
+th {
+	border: 2px solid black;
+}
+
+table tr:nth-child(odd) {
+	background-color: darkseagreen;
+}
+
+.full::after {
+	content: ' Lista generata';
+}
+
+@media screen and (max-width: 1200px) {
+	.header nav ul {
+		flex-direction: column;
+	}
 }
