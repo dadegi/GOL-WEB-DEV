@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <div class="title">
+        <h1>Todo List</h1>
+    </div>
+    <div class="container">
+        <form>
+            <input type="text" name="task" id="task" placeholder="Inserisci un task" required />
+            <button type="button" id="insert" onclick="createTask();">INSERISCI</button>
+        </form>
+        <div class="errorCnt">
+            <h3 id="error">❌ Inserire un task nel form!</h3>
+        </div>
+        <div class="list">
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+
+    <script src="assets/js/todo.js"></script>
+</body>
+
+</html>
