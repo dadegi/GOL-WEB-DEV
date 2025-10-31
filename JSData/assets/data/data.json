@@ -1,0 +1,39 @@
+{
+    "persons": [
+        {
+            "name": "Mario",
+            "surname": "Rossi",
+            "age": 30,
+            "course": 1
+        },
+        {
+            "name": "Aldo",
+            "surname": "Bianchi",
+            "age": 28,
+            "course": 3
+        }
+    ],
+    "courses": [
+        {
+            "id": 1,
+            "name": "HTML",
+            "iter": "Front-End",
+            "durata": 3,
+            "docente": "Dario"
+        },
+        {
+            "id": 2,
+            "name": "CSS",
+            "iter": "Front-End",
+            "durata": 5,
+            "docente": "Antonio"
+        },
+        {
+            "id": 3,
+            "name": "PHP",
+            "iter": "Back-End",
+            "durata": 8,
+            "docente": "Giovanna"
+        }
+    ]
+}
