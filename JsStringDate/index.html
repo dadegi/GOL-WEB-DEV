@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript avanzato - Stringhe e date</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <div class="title">
+        <h1>Stringhe e Daste</h1>
+    </div>
+
+    <hr />
+
+    <div class="strings">
+        <h2>Le stringhe</h2>
+    </div>
+
+    <div class="content">
+        <h2>Normalizzazione di una stringa</h2>
+        <form>
+            <input type="text" id="userName" />
+            <button type="button" id="sendName">invia</button>
+            <h3 id="oldName"></h3>
+            <h3 id="newName"></h3>
+        </form>
+    </div>
+
+    <hr />
+    <div class="dates">
+        <h2>Le date</h2>
+    </div>
+
+    <div class="content">
+        <h2>Verifica compleanno</h2>
+        <h3>Inserisci la tua data di nascita</h3>
+        <form>
+            <fieldset>
+                <label for="birthDate">Giorno</label>
+                <input type="number" id="birthDate" name="birthDate" />
+                <label for="birthMonth">Mese</label>
+                <input type="number" id="birthMonth" name="birthMonth" />
+                <label for="birthYear">Anno</label>
+                <input type="number" id="birthYear" name="birthYear" />
+                <button type="button" id="sendDate">invia</button>
+            </fieldset>
+        </form>
+        <h3 id="greetings"></h3>
+        <hr />
+        <h2>verifica maggiore età</h2>
+        <h3 id="adult"></h3>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
