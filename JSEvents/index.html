@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript avanzato - Gli eventi</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <div class="title">
+        <h1>Gestione degli eventi</h1>
+    </div>
+
+    <div class="container">
+        <div class="mouseEvents">
+            <h2>Eventi del mouse</h2>
+            <div class="clickEvent">
+                <h2>Evento click</h2>
+                <button type="button" onclick="printConsole();">Stampa in console</button>
+                <button type="button" id="printAlert">Avvia un alert</button>
+                <button type="button" id="printHTML">Stampa a video</button>
+
+                <h2 id="printed"></h2>
+            </div>
+            <hr />
+            <div class="overOut">
+                <h2>Eventi mouseover - mouseout</h2>
+                <div id="box">
+                    <h3></h3>
+                </div>
+                <h3>Passa col mouse sul box</h3>
+            </div>
+            <hr />
+            <div class="keyboard">
+                <h2>Eventi della tastiera</h2>
+                <h3 id="keydown"></h3>
+                <h3 id="enter">&nbsp;</h3>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

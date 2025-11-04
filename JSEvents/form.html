@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Gestione eventi: i form</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <div class="title">
+        <h1>Gestione degli eventi: i form</h1>
+    </div>
+
+    <div class="container">
+        <div class="ExampleForm">
+            <div class="inputEvent">
+                <!-- Evento input -->
+                <h2>Evento input</h2>
+                <h3>Scrivi qualcosa nel campo di input</h3>
+                <input type="text" name="nome" id="nome" />
+                <h3 id="output">&nbsp;</h3>
+                <h3>Seleziona la tua data di nascita</h3>
+                <input type="date" name="birthDate" id="birthDate" />
+                <h3 id="dateSelected">&nbsp;</h3>
+                <hr />
+
+                <!-- Evento input -->
+                <h2>Evento change</h2>
+                <h3>Scegli una lingua</h3>
+                <select id="lingua">
+                    <option value="" selected></option>
+                    <option value="italiana">italiano</option>
+                    <option value="francese">francese</option>
+                    <option value="spagnola">spagnolo</option>
+                </select>
+                <h3 id="language"></h3>
+                <h3>Seleziona i lunguaggi che conosci</h3>
+                <input type="checkbox" id="HTML" name="HTML" value="HTML" />
+                <label for="HTML">HTML</label>
+                <input type="checkbox" id="CSS" name="CSS" value="CSS" />
+                <label for="CSS">CSS</label>
+                <input type="checkbox" id="JS" name="JS" value="JavaScript" />
+                <label for="JS">JavaScript</label>
+                <h3>Conosci i seguenti linguaggi:</h3>
+                <ul id="programming"></ul>
+                <h3>Seleziona una tipologia di corso</h3>
+                <input type="radio" id="FT" name="courseType" value="Full-Time" />
+                <label for="FT">Full-Time</label>
+                <input type="radio" id="PT" name="courseType" value="Part-Time" />
+                <label for="PT">Part-Time</label>
+                <input type="radio" id="serale" name="courseType" value="Serale" />
+                <label for="serale">Serale</label>
+                <h3 id="duration">&nbsp;</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/form.js"></script>
+</body>
+
+</html>
