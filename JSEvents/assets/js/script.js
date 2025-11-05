@@ -44,9 +44,23 @@ const enter = document.getElementById('enter');
 document.addEventListener('keydown', (e) => {
 	console.log(`Hai premuto ${e.key}`);
 	keydown.innerText = `Hai premuto ${e.key}`;
-    if (e.key === 'Enter') {
-        enter.innerText = 'Con enter posso avviare una qualsiasi funzione';
-    } else {
-        enter.innerHTML = '&nbsp;'
-    }
+	if (e.key === 'Enter') {
+		enter.innerText = 'Con enter posso avviare una qualsiasi funzione';
+	} else {
+		enter.innerHTML = '&nbsp;';
+	}
+});
+
+// Delegazione degli eventi
+
+let listItems = document.querySelectorAll('#toggleList li');
+document.querySelector('#toggleList').addEventListener('click', (e) => {
+	e.target.classList.toggle('active');
+	listItems.forEach((item) => {
+		if (item.textContent !== e.target.textContent) {
+			if (item.classList.contains('active')) {
+				item.classList.remove('active');
+			}
+		}
+	});
 });

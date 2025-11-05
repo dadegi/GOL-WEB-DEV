@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="title">
+            <h1>Form di registrazione</h1>
+        </div>
+        <form id="newReg">
+            <fieldset>
+                <legend>ANAGRAFICA</legend>
+                <label for="userName">NOME</label>
+                <input type="text" id="userName" name="userName" />
+                <label for="userSurname">COGNOME</label>
+                <input type="text" id="userSurname" name="userSurname" required />
+                <p class="formError" id="surnameError">Inserire il cognome o la ragione sociale</p>
+                <label for="userAddress">INDIRIZZO</label>
+                <input type="text" id="userAddress" name="userAddress" />
+                <p>&nbsp;</p>
+                <label for="userCAP">CAP</label>
+                <input type="text" name="userCAP" id="userCAP" />
+                <label for="userCity">CITTÀ</label>
+                <input type="text" name="userCity" id="userCity" />
+                <label for="userProv">PROVINCIA</label>
+                <select id="userProv">
+                    <option value="" selected></option>
+                </select>
+                <p>&nbsp;</p>
+                <label for="userPhone">CELLULARE</label>
+                <input type="number" id="userPhone" name="userPhone" />
+                <label for="userEmail">EMAIL</label>
+                <input type="email" id="userEmail" name="userEmail" required />
+                <p class="formError" id="userMailError">Inserire una email valida</p>
+            </fieldset>
+            <p>&nbsp;</p>
+            <fieldset>
+                <legend>PREFERENZE</legend>
+                <h3>Seleziona i lunguaggi che conosci</h3>
+                <div id="languages">
+                    <input type="checkbox" id="HTML" name="HTML" value="HTML" />
+                    <label for="HTML">HTML</label>
+                    <input type="checkbox" id="CSS" name="CSS" value="CSS" />
+                    <label for="CSS">CSS</label>
+                    <input type="checkbox" id="JS" name="JS" value="JavaScript" />
+                    <label for="JS">JavaScript</label>
+                    <input type="checkbox" id="Java" name="Java" value="Java" />
+                    <label for="Java">Java</label>
+                    <input type="checkbox" id="PHP" name="PHP" value="PHP" />
+                    <label for="PHP">PHP</label>
+                </div>
+
+                <h3>Seleziona una tipologia di corso</h3>
+                <div id="courses">
+                    <input type="radio" id="FT" name="courseType" value="Full-Time" />
+                    <label for="FT">Full-Time</label>
+                    <input type="radio" id="PT" name="courseType" value="Part-Time" />
+                    <label for="PT">Part-Time</label>
+                    <input type="radio" id="serale" name="courseType" value="Serale" />
+                    <label for="serale">Serale</label>
+                </div>
+
+                <h3>Seleziona la data di inizio corso</h3>
+                <input type="date" name="startCourse" id="startCourse" required />
+            </fieldset>
+            <button type="submit" id="sendForm">INVIA</button>
+            <button type="reset">CANCELLA</button>
+        </form>
+    </div>
+
+    <script src="assets/js/registration.js"></script>
+</body>
+
+</html>

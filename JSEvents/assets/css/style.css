@@ -1,3 +1,16 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 1.2em;
+	line-height: 0.8em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
 #box {
 	width: 150px;
 	height: 150px;
@@ -6,4 +19,52 @@
 
 #box:hover {
 	background-color: yellow;
+}
+
+form input:focus {
+	background-color: aqua;
+}
+
+#emailError,
+#stopRow {
+	color: red;
+}
+
+.active {
+	background-color: yellow;
+	color: red;
+	font-weight: bold;
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	background-color: aquamarine;
+	color: brown;
+	margin-bottom: 15px;
+}
+
+legend {
+	font-size: 0.8em;
+	font-weight: bold;
+	color: brown;
+}
+
+#userName,
+#userSurname,
+#userPhone,
+#userEmail {
+	width: 40%;
+}
+
+#userAddress {
+	width: 80%;
+}
+
+#userCAP,
+#userCity,
+#userProv {
+	width: 25%;
 }

@@ -106,3 +106,39 @@ serale.addEventListener('change', () => {
 		duration.innerHTML = '&nbsp;';
 	}
 });
+
+// Eventi focus (lato CSS) e blur
+const userEmail = document.getElementById('userEmail');
+const emailError = document.getElementById('emailError');
+
+userEmail.addEventListener('blur', (e) => {
+	if (userEmail.value === '') {
+		emailError.innerText = 'Inserire una email valida!';
+	} else {
+		emailError.innerHTML = '&nbsp;';
+	}
+});
+
+// Rimozione listener
+const rowAdded = document.getElementById('rowAdded');
+const btnAddRow = document.getElementById('addRow');
+const stopRow = document.getElementById('stopRow');
+let countRow = 1;
+
+btnAddRow.addEventListener('click', (e) => {
+	if (countRow <= 3) {
+		let newInput = document.createElement('input');
+		newInput.setAttribute('type', 'text');
+		newInput.setAttribute('placeholder', `Preferenza ${countRow}`);
+		newInput.setAttribute('id', `preference${countRow}`);
+		rowAdded.appendChild(newInput);
+		countRow++;
+		if (countRow === 4) {
+			btnAddRow.style.backgroundColor = 'burlywood';
+		}
+	} else {
+		stopRow.innerText = 'Hai raggiunto il numero massimo di preferenze!';
+		btnAddRow.removeEventListener('click');
+	}
+});
+// Normalmente quando un button deve smettere di funzionare lo si disabilita, impedendo all'utente di cliccare

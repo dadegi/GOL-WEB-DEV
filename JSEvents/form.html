@@ -27,7 +27,7 @@
                 <h3 id="dateSelected">&nbsp;</h3>
                 <hr />
 
-                <!-- Evento input -->
+                <!-- Evento change -->
                 <h2>Evento change</h2>
                 <h3>Scegli una lingua</h3>
                 <select id="lingua">
@@ -54,6 +54,20 @@
                 <input type="radio" id="serale" name="courseType" value="Serale" />
                 <label for="serale">Serale</label>
                 <h3 id="duration">&nbsp;</h3>
+                <hr />
+
+                <!-- Evento blur -->
+                <h2>Evento blur</h2>
+                <input type="email" id="userEmail" name="userEmail" placeholder="inserisci la tua email" />
+                <h3 id="emailError">&nbsp;</h3>
+                <hr />
+
+                <!-- Rimozione listener -->
+                <h2>Rimozione listener</h2>
+                <h3>Aggiungere fino a tre preferenze</h3>
+                <button type="button" id="addRow">aggiungi</button>
+                <div id="rowAdded"></div>
+                <h3 id="stopRow">&nbsp;</h3>
             </div>
         </div>
     </div>
