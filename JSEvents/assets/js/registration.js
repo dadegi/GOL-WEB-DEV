@@ -15,6 +15,8 @@ const btnSendForm = document.getElementById('sendForm');
 
 const province = [];
 
+const radioItems = document.querySelectorAll('#courses input');
+
 const newUser = {
 	name: '',
 	surname: '',
@@ -55,38 +57,63 @@ async function getProv() {
 		});
 }
 
+userSurname.addEventListener('blur', function () {
+	if (userSurname.value !== '') {
+		surnameError.style.visibility = 'hidden';
+	} else {
+		surnameError.style.visibility = 'visible';
+	}
+});
+
+userEmail.addEventListener('blur', function () {
+	const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+	if (regexEmail.test(userEmail.value)) {
+		userMailError.style.visibility = 'hidden';
+	} else {
+		userMailError.style.visibility = 'visible';
+	}
+});
+
 btnSendForm.addEventListener('click', function (e) {
 	e.preventDefault();
 	events();
 });
 
 function events() {
-	console.log(checkForm());
+	if (!checkForm()) {
+		console.log('Form non valido!');
+		return;
+	} else {
+		createObject();
+	}
 }
 
 function checkForm() {
-    let validForm = false;
-    let okFor = false;
+	let validForm = false;
+	let okFor = false;
 	if (userSurname.value !== '') {
+		surnameError.style.visibility = 'hidden';
 		validForm = true;
 	} else {
+		surnameError.style.visibility = 'visible';
 		return false;
 	}
 	const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 	if (regexEmail.test(userEmail.value)) {
+		userMailError.style.visibility = 'hidden';
 		validForm = true;
 	} else {
+		userMailError.style.visibility = 'visible';
 		return false;
 	}
-	const radioItems = document.querySelectorAll('#courses input');
 	for (let i = 0; i < radioItems.length; i++) {
 		if (radioItems[i].checked === true) {
 			validForm = true;
-            okFor = true;
+			okFor = true;
 			break;
 		} else {
 			validForm = false;
-            okFor = false;
+			okFor = false;
 		}
 	}
 	if (startCourse.value !== '') {
@@ -99,4 +126,28 @@ function checkForm() {
 	} else {
 		return false;
 	}
+}
+
+function createObject() {
+	newUser.name = userName.value;
+	newUser.surname = userSurname.value;
+	newUser.address.street = userAddress.value;
+	newUser.address.CAP = userCAP.value;
+	newUser.address.city = userCity.value;
+	newUser.address.province = userProv.value;
+	newUser.contacts.phone = userPhone.value;
+	newUser.contacts.email = userEmail.value;
+	const checkItems = document.querySelectorAll('#languages input');
+	for (let i = 0; i < checkItems.length; i++) {
+		if (checkItems[i].checked === true) {
+			newUser.languages.push(checkItems[i].value);
+		}
+	}
+	for (let i = 0; i < radioItems.length; i++) {
+		if (radioItems[i].checked === true) {
+			newUser.courses = radioItems[i].value;
+		}
+	}
+	newUser.startCourse = startCourse.value;
+	console.log(newUser);
 }

@@ -68,3 +68,7 @@ legend {
 #userProv {
 	width: 25%;
 }
+
+#surnameError, #userMailError {
+	visibility: hidden;
+}
