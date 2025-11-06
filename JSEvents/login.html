@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="title">
+            <h1>Login</h1>
+        </div>
+        <div class="loginForm">
+            <form id="login">
+                <label for="userName">Nome utente</label>
+                <input type="text" id="userName" name="userName" />
+                <label for="userPass">Password</label>
+                <input type="password" id="userPass" name="userPass" />
+                <p>&nbsp;</p>
+                <button type="submit" id="sendLogin">Accedi</button>
+            </form>
+        </div>
+        <div>
+            <h2>Non hai un account? <a href="registration.html">REGISTRATI</a></h2>
+        </div>
+        <div id="loginError">
+            <h2>Credenziali errate</h2>
+        </div>
+    </div>
+
+
+    <script src="assets/js/login.js"></script>
+</body>
+
+</html>

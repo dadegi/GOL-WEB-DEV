@@ -1,3 +1,4 @@
+const newReg = document.getElementById('newReg');
 const userName = document.getElementById('userName');
 const userSurname = document.getElementById('userSurname');
 const surnameError = document.getElementById('surnameError');
@@ -14,6 +15,8 @@ const startCourse = document.getElementById('startCourse');
 const btnSendForm = document.getElementById('sendForm');
 
 const province = [];
+
+let newUsers = [];
 
 const radioItems = document.querySelectorAll('#courses input');
 
@@ -35,7 +38,12 @@ const newUser = {
 	startCourse: '',
 };
 
-document.addEventListener('DOMContentLoaded', getProv);
+document.addEventListener('DOMContentLoaded', init);
+
+function init() {
+	getProv();
+	verifyStorage();
+}
 
 async function getProv() {
 	await fetch('assets/js/province.json')
@@ -55,6 +63,15 @@ async function getProv() {
 				userProv.appendChild(newOption);
 			}
 		});
+}
+
+function verifyStorage() {
+	if (!localStorage.getItem('users')) {
+		localStorage.setItem('users', []);
+	} else {
+		newUsers = JSON.parse(localStorage.getItem('users'));
+		console.log(newUsers);
+	}
 }
 
 userSurname.addEventListener('blur', function () {
@@ -85,6 +102,7 @@ function events() {
 		return;
 	} else {
 		createObject();
+		memorizeStorage();
 	}
 }
 
@@ -150,4 +168,10 @@ function createObject() {
 	}
 	newUser.startCourse = startCourse.value;
 	console.log(newUser);
+	newReg.reset();
+}
+
+function memorizeStorage() {
+	newUsers.push(newUser);
+	localStorage.setItem('users', JSON.stringify(newUsers));
 }

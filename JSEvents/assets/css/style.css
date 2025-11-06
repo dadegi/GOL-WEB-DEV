@@ -72,3 +72,12 @@ legend {
 #surnameError, #userMailError {
 	visibility: hidden;
 }
+
+#loginError {
+	visibility: hidden;
+}
+
+.errorMessage {
+	display: flex;
+	justify-content: center;
+}
