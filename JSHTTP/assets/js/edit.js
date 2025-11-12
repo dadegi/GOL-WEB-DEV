@@ -1,4 +1,4 @@
-const REQUEST_URL = 'https://jsonplaceholder.typicode.com/posts/';
+const REQUEST_URL = 'https://jsonplaceholder.typicode.com/posts/'; // Variabile globale per gestire la chiamata all'API
 
 const postTitle = document.getElementById('postTitle');
 const userPost = document.getElementById('userPost');
